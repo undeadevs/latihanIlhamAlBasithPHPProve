@@ -1,0 +1,196 @@
+nav{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr max-content;
+    grid-auto-rows: 5em;
+    height: 5em;
+    padding: 0 var(--side-space);
+    animation: fadeIn .5s ease-in-out;
+    position: relative;
+}
+
+nav .logo{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    grid-auto-rows: 5em;
+    align-items: center;
+}
+
+nav .company-name{
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+nav .burger-menu{
+    border: 0;
+    background-color: transparent;
+    align-self: center;
+    position: relative;
+}
+
+nav .nav-links{
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: max-content;
+    gap: 3em;
+    align-items: center;
+}
+
+nav .nav-links a{
+    text-decoration: none;
+    font-size: .75em;
+    color: gray;
+}
+
+@media screen and (min-width:970px) {
+    nav .burger-menu{
+        display: none;
+    }
+
+    .nav-links a{
+        position: relative;
+        transition: color .25s ease;
+    }
+
+    .nav-links a.active{
+        color: #2e3ed0;
+        font-weight: 700;
+    }
+
+    .nav-links a:hover{
+        color: black;
+    }
+
+    .nav-links a::before{
+        position: absolute;
+        content: '';
+        top: -.5em;
+        bottom: -.5em;
+        left: -1em;
+        right: -1em;
+        border-radius: .5em;
+        background-color: #ebebeb;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity .5s ease;
+    }
+
+    .nav-links a:hover::before{
+        opacity: 1;
+    }
+
+    .nav-links .nav-cta a{
+        color: white;
+    }
+
+    .nav-links .nav-cta a::before{
+        opacity: 1;
+        background-color: #2e3ed0;
+        transition: background-color .5s ease;
+    }
+
+    .nav-links .nav-cta a:hover::before{
+        background-color: #2e61d0;
+    }
+}
+
+@media screen and (max-width:970px) {
+    nav{
+        z-index: 5;
+    }
+
+    nav .burger-menu{
+        display: block;
+        font-size: 2em;
+    }
+
+    nav .nav-links{
+        display: none;
+        z-index: -1;
+    }
+
+    nav .nav-links.active{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        display: grid;
+        grid-auto-flow: row;
+        grid-auto-rows: 3em;
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 0 calc(var(--side-space) / 2);
+        font-size: 2em;
+        background-color: #68bdc4;
+        animation: fadeIn .5s ease-in-out;
+    }
+
+    nav .nav-links li{
+        height: 100%;
+        display: grid;
+    }
+
+    nav .nav-links a{
+        color: white;
+        height: 100%;
+        display: grid;
+        align-items: center;
+        position: relative;
+    }
+
+    nav .nav-links a.active{
+        /* color: black; */
+    }
+
+    nav .nav-links a.active::after{
+        position: absolute;
+        content: '';
+        top: 0;
+        bottom: 0;
+        right: calc(var(--side-space) / 1.5 * -1);
+        left: calc(var(--side-space) / 1.5 * -1);
+        background-color: #8fb9d4;
+        z-index: -1;
+    }
+
+    nav .nav-links a::before{
+        position: absolute;
+        content: '';
+        top: 0;
+        bottom: 0;
+        right: calc(var(--side-space) / 1.5 * -1);
+        left: calc(var(--side-space) / 1.5 * -1);
+        background-color: #5ca8db;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity .5s ease;
+    }
+    nav .nav-links a:hover::before{
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:500px){
+    body{
+        --side-space: 2em;
+    }
+    nav .company-name{
+        display: none;
+    }
+    nav .logo::after{
+        content: 'BSJ';
+        font-weight: 700;
+        font-size: 1.5em;
+    }
+}
+
+footer{
+    background-color: #2e3ed0;
+    color: white;
+    font-size: 1em;
+    padding: 2em var(--side-space);
+    text-align: center;
+}

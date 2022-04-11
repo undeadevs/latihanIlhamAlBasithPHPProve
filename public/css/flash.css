@@ -1,0 +1,25 @@
+.flash-msg{
+    position: fixed;
+    width: 100vw;
+    text-align: center;
+    font-size: 1em;
+    padding: 1em;
+    font-weight: 600;
+    background-color: gray;
+    color: white;
+    transform: translateY(-4em);
+    transition: transform .5s ease;
+    z-index: 9999;
+}
+
+.flash-msg.show{
+    transform: translateY(0);
+}
+
+.flash-msg.error{
+    background-color: rgb(223, 64, 103);
+}
+
+.flash-msg.success{
+    background-color: rgb(39, 170, 105);
+}

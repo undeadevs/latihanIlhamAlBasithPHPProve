@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;800&display=swap');
+@import url('../lib/animate/animate.min.css');
+@import url('./flash.css');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(110.09deg, #2E3ED0 5.05%, #A674F7 85.06%);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+main{
+    width: 30em;
+    height: 32em;
+    background: linear-gradient(161.26deg, rgba(255, 255, 255, 0.27) 5.17%, rgba(255, 255, 255, 0.06) 90.83%);
+    border-radius: 1.5em;
+    padding: 3.5em 4em;
+    display: grid;
+    align-content: center;
+    grid-auto-rows: max-content;
+    gap: 2em;
+}
+
+main h1{
+    font-size: 3em;
+    font-weight: 800;
+    text-align: center;
+    color: white;
+}
+
+main form{
+    display: grid;
+    place-items: center;
+    gap: 2em;
+}
+
+form input{
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    border: 0;
+    background: linear-gradient(18.74deg, rgba(255, 255, 255, 0.27) 5.17%, rgba(255, 255, 255, 0.06) 90.83%);
+    border-radius: .5em;
+    padding: .75em .75em;
+    color: white;
+}
+
+::placeholder{
+    color: hsla(0, 0%, 100%, 40%);
+    opacity: 1;
+}
+
+::-ms-input-placeholder{
+    color: hsla(0, 0%, 100%, 40%);
+}
+
+:-ms-input-placeholder{
+    color: hsla(0, 0%, 100%, 40%);
+}
+
+form .login-btn{
+    width: 100%;
+    border: 0;
+    background-color: #E95DDB;
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    padding: .75em 0;
+    border-radius: .5em;
+    cursor: pointer;
+    box-shadow: 0 .25em 1em 0 #9C4CDA;
+    text-shadow: 0 .25em .25em #AF2FEB;
+    transition: background-color .5s ease;
+}
+
+form .login-btn:hover{
+    background-color: #e95d8c;
+}
+
+main .no-account, main .notice{
+    font-size: 1em;
+    color: hsla(0, 0%, 100%, 40%);
+    text-align: center;
+}
+
+main .no-account a{
+    color: hsla(0, 0%, 100%, 50%);
+    text-decoration: none;
+    transition: color .25s ease;
+}
+
+main .no-account a:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+@media screen and (min-height: 1300px){
+    body{
+        font-size: 1vmax;
+    }
+    main{
+        width: 30vmax;
+        height: 40vmax;
+    }
+}
+
+@media screen and (max-width: 645px) {
+    body{
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    body{
+        font-size: x-small;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    body{
+        font-size: 1vmax;
+    }
+
+    main{
+        width: 30vmax;
+        height: 45vmax;
+    }
+}

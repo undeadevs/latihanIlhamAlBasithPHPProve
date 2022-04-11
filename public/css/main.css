@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;800&display=swap');
+@import url('../lib/animate/animate.min.css');
+@import url('../lib/font-awesome/css/font-awesome.min.css');
+@import url('./partials.css');
+@import url('./flash.css');
+
+:root{
+    --side-space: 4em;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+button{
+    cursor: pointer;
+}
+
+main>.hero{
+    height: 25.5em;
+    display: grid;
+    place-content: center;
+    background: linear-gradient(hsla(0, 0%, 0%, 0.5), hsla(0, 0%, 0%, 0.5)), url('../images/home-hero.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    padding: 0 var(--side-space);
+}
+
+main>.hero>h1{
+    font-weight: 800;
+    font-size: 4em;
+    color: white;
+    animation: fadeInUp .75s ease-in-out;
+}
+
+main>.hero>p{
+    font-weight: 500;
+    font-size: 1em;
+    color: hsla(0, 0%, 100%, 75%);
+    margin-bottom: 3em;
+    animation: fadeInUp .5s ease-in-out .25s backwards;
+}
+
+main>.hero>.cta-btn{
+    justify-self: center;
+    font-weight: 500;
+    font-size: 1em;
+    font-family: inherit;
+    border: 0;
+    width: max-content;
+    padding: 1em 5em;
+    border-radius: .5em;
+    background-color: #2e3ed0;
+    color: white;
+    animation: fadeIn 1s ease-in-out;
+    transition: background-color .5s ease;
+}
+
+main>.hero>.cta-btn:hover{
+    background-color: #2e61d0;
+}
+
+main>.prosedur{
+    padding: 0 var(--side-space);
+    margin: 6em 0;
+}
+
+main>.prosedur h2{
+    text-align: center;
+    animation: fadeIn 1s ease;
+}
+
+main>.prosedur .prosedur-list{
+    display: grid;
+    font-size: 1em;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 12.5em);
+    gap: 1.5em;
+    margin-top: 3em;
+    margin-bottom: 6em;
+}
+
+main>.prosedur .prosedur-card{
+    list-style: none;
+    padding: 1.5em;
+    height: 13em;
+    text-align: center;
+    border-radius: .5em;
+    border: .1em solid #2e3ed0;
+    color: #2e3ed0;
+    display: grid;
+    place-items: center;
+    animation: fadeIn 1s ease;
+}
+
+main>.prosedur .prosedur-card>.card-title{
+    animation: fadeIn .5s ease;
+}
+
+main>.prosedur .prosedur-card>.card-icon{
+    font-size: 2em;
+    animation: fadeInUp .5s ease;
+}
+
+main .profile-section{
+    padding: 4.5em var(--side-space);
+}
+
+main .profile-section-title{
+    font-size: 4em;
+    color: #2e3ed0;
+    margin-bottom: 1.5em;
+    animation: fadeInUp .5s ease;
+}
+
+main .profile-section-desc{
+    font-size: 2em;
+    animation: fadeIn 1s ease;
+}
+
+main .profile-section.visi-misi{
+    text-align: center;
+    background-color: #e5fcfc;
+}
+
+main .profile-section.struktur-organisasi{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
+
+main .profile-section.struktur-organisasi .profile-section-title{
+    animation: fadeInLeft .5s ease;
+}
+
+main .profile-section-img{
+    width: 100%;
+    animation: fadeIn 1s ease;
+}
+
+main.buku-tamu, main.kontak{
+    padding: 0 var(--side-space);
+    display: grid;
+    align-content: center;
+}
+
+main.buku-tamu h1,
+main.kontak h1
+{
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+main.buku-tamu h3,
+main.kontak h3
+{
+    width: 50%;
+    justify-self: center;
+    font-weight: 500;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+main form.generic-form{
+    width: 50%;
+    display: grid;
+    justify-self: center;
+    gap: 1em;
+}
+
+main form.generic-form *{
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-progress-appearance: none;
+    font-family: inherit;
+    font-size: 1.1em;
+    padding: .5em;
+    border: .1em solid #2e3ed0;
+    border-radius: .25em;
+}
+
+main form.generic-form textarea{
+    resize: vertical;
+}
+
+main form.generic-form .submit-btn{
+    font-size: 1em;
+}
+
+main{
+    min-height: calc(100vh - 10.25rem);
+}
+
+.submit-btn{
+    background-color: #2e3ed0;
+    color: white;
+}
+
+main.beranda .berita{
+    padding: 0 var(--side-space);
+}
+
+main.beranda .berita>h2{
+    text-align: center;
+    animation: fadeIn 1s ease;
+}
+
+main.beranda .berita-list{
+    margin-top: 3em;
+    margin-bottom: 6em;
+}
+
+main.beranda .berita-item{
+    border-radius: .5em;
+    overflow: hidden;
+    position: relative;
+    animation: fadeIn 1s ease;
+}
+
+main.beranda .berita-img{
+    height: 17em;
+    object-fit: cover;
+}
+
+main.beranda .berita-link{
+    width: 100%;
+    height: 5em;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    position: absolute;
+    bottom: 0;
+    transition: text-shadow .5s ease;
+}
+
+main .berita-link:focus,
+main .berita-link:hover{
+    text-shadow: 0 0 1em white, 0 0 .5em white;
+}
+
+main.galeri, main.berita, main.single-berita{
+    padding: 0 var(--side-space);
+}
+
+main.galeri .title, main.berita .title, main.single-berita .title{
+    font-size: 4em;
+    color: #2e3ed0;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    animation: fadeInUp .5s ease;
+    text-align: center;
+}
+
+main.galeri .images{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-bottom: var(--side-space);
+    gap: 1em;
+    animation: fadeIn .5s ease;
+}
+
+main.galeri .image-item{
+    width: 100%;
+    height: 25em;
+    object-fit: cover;
+}
+
+main.berita .top{
+    display: grid;
+    grid-template-columns: 1fr max-content max-content;
+    align-items: center;
+    gap: .5em;
+    animation: fadeIn .5s ease;
+}
+
+main.berita .top h3{
+    font-size: 1.5em;
+}
+
+main.berita .prev-btn, main.berita .next-btn{
+    border: 0;
+    background-color: #2e3ed0;
+    color: white;
+    padding: .5em .75em;
+    font-size: 1.25em;
+    border-radius: .5em;
+}
+
+main.berita .disabled-btn{
+    cursor: not-allowed;
+    background-color: white;
+    color: #2e3ed0;
+    border: .1em solid #2e3ed0;
+}
+
+main.berita .berita-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(31em, 1fr));
+    gap: 2em;
+    margin-bottom: var(--side-space);
+    margin-top: calc(var(--side-space) / 2);
+    animation: fadeIn 1s ease;
+}
+
+main.berita .berita-item{
+    display: grid;
+    grid-template-columns: 12.5em 1fr;
+    gap: 1em;
+    justify-items: left;
+    align-items: center;
+}
+
+main.berita .berita-img{
+    width: 100%;
+    height: 12.5em;
+    object-fit: cover;
+}
+
+main.berita .berita-date{
+    font-size: 1em;
+}
+
+main.berita .berita-title{
+    font-size: 1.25em;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    word-wrap: break-word;
+    transition: color .15s ease;
+}
+
+main.berita .berita-title:focus,
+main.berita .berita-title:hover
+{
+    outline: 0;
+    color: #2e3ed0;
+    text-decoration: underline;
+}
+
+main.single-berita{
+    display: grid;
+    justify-items: center;
+}
+
+main.single-berita>*{
+    width: 50%;
+}
+
+main.single-berita .title{
+    text-align: left;
+}
+
+main.single-berita .image{
+    animation: fadeIn 1s ease;
+}
+
+main.single-berita .content{
+    margin-bottom: var(--side-space);
+    margin-top: calc(var(--side-space) / 2);
+    font-size: 1.25em;
+    line-height: 1.25em;
+    animation: fadeIn 1s ease;
+}
+
+@media screen and (max-width:970px) {
+    main{
+        font-size: .7em;
+    }
+    main .profile-section.struktur-organisasi{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    main .profile-section.struktur-organisasi .profile-section-title{
+        animation: fadeInUp .5s ease;
+    }
+}
+
+@media screen and (max-width:550px){
+    main.buku-tamu h3,
+    main.kontak h3{
+        width: 100%;
+    } 
+    main form.generic-form{
+        width: 100%;
+    }
+}
